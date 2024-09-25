@@ -1,10 +1,10 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');
 let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
-const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const letrasVogais = 'AEIOU';
 const letrasMinusculas = 'abcdefghijclmnopqrstuvwxyz';
 const numeros = '0123456789';
-const simbolos = '!?@%*';
+const simbolos = '!?@%*+-/<>';
 const botoes = document.querySelectorAll('.parametro-senha__botao');
 const campoSenha = document.querySelector('#campo-senha');
 const checkbox = document.querySelectorAll('.checkbox');
@@ -39,7 +39,7 @@ geraSenha();
 function geraSenha() {
     let alfabeto = ''; 
     if (checkbox[0].checked){
-        alfabeto = alfabeto + letrasMaiusculas;   
+        alfabeto = alfabeto + letrasVogais;   
     }
     if (checkbox[1].checked){
         alfabeto = alfabeto + letrasMinusculas;   
